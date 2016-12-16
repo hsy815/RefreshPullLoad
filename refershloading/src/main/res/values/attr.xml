@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="loadPull" format="boolean" />
+    <attr name="loadDown" format="boolean" />
+
+    <declare-styleable name="PullDownLoadLayout">
+        <attr name="loadPull" />
+        <attr name="loadDown" />
+    </declare-styleable>
+</resources>

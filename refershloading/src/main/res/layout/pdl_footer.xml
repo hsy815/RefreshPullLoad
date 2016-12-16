@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/pdl_footer_padding_top"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/pdl_tv_down"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/pdl_pull_tv_height"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@mipmap/pulls"
+        android:gravity="center_vertical"
+        android:text="@string/pdl_down"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/pdl_text_size" />
+
+    <com.hsy.refershloading.view.EatBeanLoadingView
+        android:id="@+id/pdl_elv_down"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pdl_loading_view_height"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+</RelativeLayout>

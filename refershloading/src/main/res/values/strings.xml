@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">library</string>
+
+    <string name="pdl_pull">下拉刷新</string>
+    <string name="pdl_down">上拉加载</string>
+    <string name="release_to_pull">松开刷新</string>
+    <string name="release_to_down">松开加载</string>
+    <string name="continue_to_pull">继续向下拉</string>
+    <string name="continue_to_down">继续向上拉</string>
+
+</resources>
