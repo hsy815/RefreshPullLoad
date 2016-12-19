@@ -47,7 +47,7 @@ public class OrdinaryPDLView extends ViewGroup {
     private int lastChildIndex;
     private Animation operatingAnim = null;
     //头部布局
-    private RelativeLayout LayoutHeader;
+    public RelativeLayout LayoutHeader;
     //头部textview
     private TextView pdl_tv_pull;
     //头部加载动画Linear
@@ -59,7 +59,7 @@ public class OrdinaryPDLView extends ViewGroup {
     //加载时文本
     public TextView ordinary_pdl_tv_h;
     //底部布局
-    private RelativeLayout LayoutFooter;
+    public RelativeLayout LayoutFooter;
     //底部textview
     private TextView pdl_tv_down;
     //底部加载动画Linear

@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 //        pullDownLoadView.setMoveDistanceTop(pullDownLoadView.MoveDistanceAll);
         ordinaryPDLView = (OrdinaryPDLView) findViewById(R.id.pullDownLoadView);
         ordinaryPDLView.setMoveDistanceTop(ordinaryPDLView.MoveDistanceAll);
-        
+
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
