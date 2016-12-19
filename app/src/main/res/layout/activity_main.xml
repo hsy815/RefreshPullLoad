@@ -7,7 +7,7 @@
     tools:context="com.hsy.refershpullload.MainActivity">
 
 
-    <com.hsy.refershloading.view.PullDownLoadView
+    <com.hsy.refershloading.view.OrdinaryPDLView
         android:id="@+id/pullDownLoadView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -17,6 +17,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
-    </com.hsy.refershloading.view.PullDownLoadView>
+    </com.hsy.refershloading.view.OrdinaryPDLView>
 
 </RelativeLayout>

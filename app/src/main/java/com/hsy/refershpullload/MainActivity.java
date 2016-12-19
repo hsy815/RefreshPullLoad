@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 
 import com.hsy.refershloading.adapter.RecyclerAdapter;
 import com.hsy.refershloading.view.MyRecyclerView;
+import com.hsy.refershloading.view.OrdinaryPDLView;
 import com.hsy.refershloading.view.PullDownLoadView;
 
 import java.util.ArrayList;
@@ -15,8 +16,10 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private MyRecyclerView recyclerView;
-    private PullDownLoadView pullDownLoadView;
+//    private PullDownLoadView pullDownLoadView;
     private RecyclerAdapter viewAdapter;
+
+    private OrdinaryPDLView ordinaryPDLView;
 
     private int a = 0;
 
@@ -29,14 +32,17 @@ public class MainActivity extends AppCompatActivity {
 
     private void initview() {
         recyclerView = (MyRecyclerView) findViewById(R.id.recycler);
-        pullDownLoadView = (PullDownLoadView) findViewById(R.id.pullDownLoadView);
-        pullDownLoadView.setMoveDistanceTop(pullDownLoadView.MoveDistanceAll);
+//        pullDownLoadView = (PullDownLoadView) findViewById(R.id.pullDownLoadView);
+//        pullDownLoadView.setMoveDistanceTop(pullDownLoadView.MoveDistanceAll);
+        ordinaryPDLView = (OrdinaryPDLView) findViewById(R.id.pullDownLoadView);
+        ordinaryPDLView.setMoveDistanceTop(ordinaryPDLView.MoveDistanceAll);
+        
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
         viewAdapter = new RecyclerAdapter(this, getData());
         recyclerView.setAdapter(viewAdapter);
-        pullDownLoadView.setOnRefreshListener(new PullDownLoadView.onRefreshListener() {
+        ordinaryPDLView.setOnRefreshListener(new OrdinaryPDLView.onRefreshListener() {
             @Override
             public void onRefresh() {
                 a = 1;
@@ -61,10 +67,10 @@ public class MainActivity extends AppCompatActivity {
         public void onFinish() {
             switch (a) {
                 case 1:
-                    pullDownLoadView.stopRefresh();
+                    ordinaryPDLView.stopRefresh();
                     break;
                 case 2:
-                    pullDownLoadView.stopLoadMore();
+                    ordinaryPDLView.stopLoadMore();
                     break;
             }
         }
